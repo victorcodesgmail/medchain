@@ -4,6 +4,10 @@
       "main": "src/dapp_backend/main.mo",
       "type": "motoko"
     },
+    "internet_identity" : {
+      "type": "pull",
+      "id": "rdmx6-jaaaa-aaaaa-aaadq-cai"
+    },
     "dapp_frontend": {
       "dependencies": [
         "dapp_backend"

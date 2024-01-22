@@ -2,24 +2,108 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <!-- <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-eval' 'unsafe-inline';"> -->
+    <!-- <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'sha256-NunJinm9Kkl2Mk2iphVckwMlJl9KbY2zggfIdPM/GTg=';"> -->
+    <!-- <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'nonce-your-generated-nonce';"> -->
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-eval' 'unsafe-inline' 'sha256-NunJinm9Kkl2Mk2iphVckwMlJl9KbY2zggfIdPM/GTg=' nonce-'your-generated-nonce';">
+
+
+    <script nonce="your-generated-nonce">
+      // Your script here
+    </script>
+    <script src="index.js" defer></script>
+
     <meta name="viewport" content="width=device-width" />
-    <title>dapp</title>
+    <title>Decentralized Healthcare Records</title>
     <base href="/" />
     <link rel="icon" href="favicon.ico" />
     <link type="text/css" rel="stylesheet" href="main.css" />
+
   </head>
-  <body>
-    <main>
-      <img src="logo2.svg" alt="DFINITY logo" />
-      <br />
-      <br />
-      <form action="#">
-        <label for="name">Enter your name: &nbsp;</label>
-        <input id="name" alt="Name" type="text" />
-        <button type="submit">Click Me!</button>
+  <body  >
+    <div class="container" class="hidden">
+      <h1>My Healthcare Records</h1>
+
+      <img class="image" src="logo-color.png" alt="DFINITY logo" />
+      <form id="loginForm">
+        <button id="login">Login!</button>
       </form>
+
+      <br />
+      
+      
+      
+      <form id="whoAmIForm" >
+        <button id="whoAmI">Who Am I</button>
+      </form>
+      <br />
+      <br />
+      <div id = "body" class="body">
+
+      <br />
+
+      <section id="principal"></section>
+
+      <!-- <img src="logo2.svg" alt="DFINITY logo" /> -->
+      <br />
+      <br />
+
+      <form id="record-form"  action="#">
+        <label for="name">Name:</label>
+        <input type="text" id="name" required />
+        <label for="diagnosis">Diagnosis:</label>
+        <input type="text" id="diagnosis" required />
+        <label for="treatment">Treatment:</label>
+        <input type="text" id="treatment" required />
+        <div>
+          <button id="button" type="submit">  
+            <span>Create Record</span>
+          </button>
+        </div>
+      </form>
+      <div id="greeting">
+
+      </div>
+
       <section id="greeting"></section>
       <section id="action"></section>
-    </main>
+      <section id="treatment"></section>
+      <div id="userRecords">
+
+        <div class="userRecord">
+          <img src="user1.jpg" alt="User 1">
+          <div class="details">
+              <p>Name: John Do</p>
+              <p>malaria</p>
+              <p>Name: John Do</p>
+              <p>therapy</p>
+          </div>
+          <div class="actions">
+              <button id="button" type="submit">Edit</button>
+              <button id="button" type="submit">Delete</button>
+          </div>
+      </div>
+
+      <div class="userRecord">
+          <img src="user2.jpg" alt="User 2">
+          <div class="details">
+              <p>Name: Jane Smith</p>
+              <p>Name: John </p>
+              <p>therapy</p>
+          </div>
+          <div class="actions">
+              <button id="button" type="submit">Edit</button>
+              <button id="button" type="submit">Delete</button>
+          </div>
+      </div>
+        <!-- User records will be displayed here -->
+    </div>
+
+      </div>
+    
+    </div>
+
+ 
   </body>
 </html>
+
